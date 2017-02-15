@@ -3,7 +3,7 @@
     "type": "opencart-vqmod",
     "description": "Vqmod modification adds google analytics user identificator into template.",
     "require": {
-        "xruff/installers": "*"
+        "composer/installers": "dev-opencart"
     },
     "repositories": [
         {
