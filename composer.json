@@ -8,7 +8,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/xruff/installers"
+            "url": "https://github.com/XRuff/installers"
         }
     ]
 }
