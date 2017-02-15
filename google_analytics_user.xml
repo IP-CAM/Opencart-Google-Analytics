@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Google Analytics - Customer id</id>
+	<version>1.0.0</version>
+	<vqmver required="true">2.4.0</vqmver>
+	<author>Pavel Lauko</author>
+
+	<file name="catalog/controller/common/header.php">
+		<operation>
+			<search position="after"><![CDATA[
+				$this->data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
+			]]></search>
+			<add><![CDATA[
+				$this->data['customer_id'] = $this->customer->getId();
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/view/theme/*/template/common/header.tpl">
+		<operation>
+			<search position="after"><![CDATA[
+				<?php echo $google_analytics; ?>
+			]]></search>
+			<add><![CDATA[
+				<?php if ($logged && $customer_id) { ?>
+					<script type="text/javascript">
+						ga('set', 'userId', '<?php echo $customer_id; ?>');
+					</script>
+				<?php }  ?>
+			]]></add>
+		</operation>
+	</file>
+
+</modification>
