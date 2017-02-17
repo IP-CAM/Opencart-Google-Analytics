@@ -11,8 +11,8 @@
             "vqmod/xml/google_analytics_user.xml"
         ],
         "installers" : {
-            "php" : "src/test.php",
-            "xml" : "src/install.xml"
+            "php" : "test.php",
+            "xml" : "install.xml"
        }
     }
 }
