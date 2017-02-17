@@ -9,10 +9,6 @@
         "src-dir" : "src",
         "mappings" : [
             "vqmod/xml/google_analytics_user.xml"
-        ],
-        "installers" : {
-            "php" : "test.php",
-            "xml" : "install.xml"
-       }
+        ]
     }
 }
