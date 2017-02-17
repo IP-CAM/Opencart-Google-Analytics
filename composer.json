@@ -1,14 +1,14 @@
 {
     "name": "xruff/opencart-ga-vqmod",
-    "type": "opencart-vqmod",
+    "type": "opencart-extension",
     "description": "Vqmod modification adds google analytics user identificator into template.",
     "require": {
-        "composer/installers": "v1.2.0 as dev-opencart"
+        "beyondit/opencart-extension-installer": "*"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/XRuff/installers"
-        }
-    ]
+    "extra": {
+        "src-dir" : "src",
+        "mappings" : [
+            "vqmod/xml/google_analytics_user.xml"
+        ]
+    },
 }
